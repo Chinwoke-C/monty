@@ -32,4 +32,29 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct global_variable - opcoode and its function
+ * @file: the opcode
+ * @push_arg: function to handle the opcode
+ * @buffer: pointer to
+ * Description: opcode and its function
+ * for stack, queues, LIFO, FIFO
+ */
+
+typedef struct global_variable
+{
+	FILE *file;
+	int push_arg;
+	char *buffer;
+} global_var;
+
+extern global_var var_global;
+
+
+/*Monty Functions*/
+void f_pall(stack_t **stack, unsigned int line_number);
+void f_push(stack_t **stack, unsigned int line_number);
+
+/*Utils Funtions*/
+void free_dlistint(stack_t *head);
 #endif _MONTY_H_
