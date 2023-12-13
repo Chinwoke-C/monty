@@ -1,7 +1,13 @@
-#ifndef _MONTY_H_
-#define _MONTY_H_
+#ifndef MONTY_H
+#define MONTY_H
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <ctype.h>
+
+/*--- Struct Definitions ---*/
+extern int push_arg;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -50,6 +56,10 @@ typedef struct global_variable
 
 extern global_var var_global;
 
+void read_file(char *filename, stack_t **stack);
+char *parse_line(char *line, stack_t **stack, unsigned int line_number);
+typedef void (*instruct_func)(stack_t **stack, unsigned int line_number);
+instruct_func get_op_func(char *str);
 
 /*Monty Functions*/
 void f_pall(stack_t **stack, unsigned int line_number);
@@ -57,4 +67,4 @@ void f_push(stack_t **stack, unsigned int line_number);
 
 /*Utils Funtions*/
 void free_dlistint(stack_t *head);
-#endif _MONTY_H_
+#endif

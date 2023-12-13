@@ -10,7 +10,7 @@ void f_pall(stack_t **stack, unsigned int line_number)
 	stack_t *h;
 	(void)line_number;
 
-	h = *head;
+	h = *stack;
 	if (h == NULL)
 		return;
 	while (h != NULL)
