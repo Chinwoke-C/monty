@@ -64,7 +64,7 @@ instruct_func get_op_func(char *str);
 /*Monty Functions*/
 void f_pall(stack_t **stack, unsigned int line_number);
 void f_push(stack_t **stack, unsigned int line_number);
-void pint(Stack_t *stack, unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
 
 /*Utils Funtions*/
 void free_dlistint(stack_t *head);
