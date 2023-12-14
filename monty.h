@@ -39,7 +39,7 @@ typedef struct instruction_s
 } instruction_t;
 
 /**
- * struct global_variable - opcoode and its function
+ * struct global_variable - opcode and its function
  * @file: the opcode
  * @push_arg: function to handle the opcode
  * @buffer: pointer to
