@@ -4,10 +4,6 @@
  * @stack: Pointer to the stack
  * @line_number: line number where the instruction appears.
  */
-void pint(Stack_t *stack, unsigned int line_number)
-
- * @line_number: number of line opcode occurs on
- */
 void pint(stack_t **stack, unsigned int line_number)
 {
 	stack_t *runner;
