@@ -7,7 +7,11 @@
  */
 void pint(Stack_t *stack, unsigned int line_number)
 
+ * @line_number: number of line opcode occurs on
+ */
+void pint(stack_t **stack,unsigned in line_number)
 {
+	stack_t *top
 	if (stack->top == NULL)
 	{
 		(void)line_number;
