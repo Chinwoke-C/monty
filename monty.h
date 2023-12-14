@@ -39,7 +39,7 @@ typedef struct instruction_s
 } instruction_t;
 
 /**
- * struct global_variable - opcoode and its function
+ * struct global_variable - opcode and its function
  * @file: the opcode
  * @push_arg: function to handle the opcode
  * @buffer: pointer to
@@ -64,6 +64,7 @@ instruct_func get_op_func(char *str);
 /*Monty Functions*/
 void f_pall(stack_t **stack, unsigned int line_number);
 void f_push(stack_t **stack, unsigned int line_number);
+void pint(Stack_t *stack, unsigned int line_number);
 
 /*Utils Funtions*/
 void free_dlistint(stack_t *head);
