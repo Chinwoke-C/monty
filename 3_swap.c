@@ -4,14 +4,16 @@
  * @stack: input
  * Return: void
  */
-void swap(Stack **stack, unsigned int line_number)
+void _swap(stack_t **stack, unsigned int line_number)
 {
+
 	if (stack->top == NULL || stack->top->next == NULL)
 	{
 		fprintf(stderr, "Error: can't print, stack too short\n");
 		exit(EXIT_FAILURE);
 	}
-
+	stack_t *top;
+	top = *stack;
 	Node *first = stack->top;
 	Node *second = first->next;
 
