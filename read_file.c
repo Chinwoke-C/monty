@@ -70,7 +70,8 @@ instruct_func get_op_func(char *str)
 		{"pint", pint},
 		{"pop", _pop},
 		{"add", _add},
-		{"sub", _sub}
+		{"sub", _sub},
+		{"div", _div}
 	};
 
 	i = 0;
