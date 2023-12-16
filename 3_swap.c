@@ -1,34 +1,22 @@
 #include "monty.h"
 /**
- *_swap - swaps the top most 2 elements of the stack
- * @stack: input
- * Return: void
+ * _swap - swap top of stack y second top stack
+ * @stack: pointer to lists for monty stack
+ * @line_number: number of line opcode occurs on
  */
+
 void _swap(stack_t **stack, unsigned int line_number)
 {
+	stack_t *runner;
+	int tmp;
 
-	if (stack->top == NULL || stack->top->next == NULL)
+	runner = *stack;
+	if (runner == NULL || runner->next == NULL)
 	{
-		fprintf(stderr, "Error: can't print, stack too short\n");
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	stack_t *top;
-	top = *stack;
-	Node *first = stack->top;
-	Node *second = first->next;
-
-	/* Adjust links for the first node*/
-	first->next = second->next;
-	if (second->next != NULL)
-	{
-		second->next->prev = first;
-	}
-
-	/*Adjust links for the second node*/
-	second->prev = NULL;
-	second->next = first;
-	first->prev = second;
-
-	/* Update the top of the stack*/
-	stack->top = second;
+	tmp = runner->n;
+	runner->n = runner->next->n;
+	runner->next->n = tmp;
 }
