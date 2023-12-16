@@ -72,7 +72,8 @@ instruct_func get_op_func(char *str)
 		{"add", _add},
 		{"sub", _sub},
 		{"div", _div},
-		{"swap", _swap}
+		{"swap", _swap},
+		{"mul", _mul}
 	};
 
 	i = 0;
